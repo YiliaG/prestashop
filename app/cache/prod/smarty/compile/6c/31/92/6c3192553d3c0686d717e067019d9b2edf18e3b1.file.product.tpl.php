@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:10:49
+<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:19:55
          compiled from "D:\php\prestashop\themes\classic\templates\catalog\_partials\miniatures\product.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:844858bce025e98b97-02784982%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c3192553d3c0686d717e067019d9b2edf18e3b1' => 
     array (
       0 => 'D:\\php\\prestashop\\themes\\classic\\templates\\catalog\\_partials\\miniatures\\product.tpl',
-      1 => 1488773448,
+      1 => 1488773893,
       2 => 'file',
     ),
     '021489d5a57ac632f02acafa6e9b3fd0619c3429' => 
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58bce026001449_46243632')) {function content_58bce026001449_46243632($_smarty_tpl) {?>
-<article class="col-md-3" data-id-product="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product'], ENT_QUOTES, 'UTF-8');?>
+<article class="product-miniature js-product-miniature" data-id-product="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product'], ENT_QUOTES, 'UTF-8');?>
 " data-id-product-attribute="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product_attribute'], ENT_QUOTES, 'UTF-8');?>
 " itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
@@ -114,7 +114,7 @@ $_smarty_tpl->tpl_vars['flag']->_loop = true;
           <?php /*  Call merged included template "catalog/_partials/variant-links.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('catalog/_partials/variant-links.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('variants'=>$_smarty_tpl->tpl_vars['product']->value['main_variants']), 0, '844858bce025e98b97-02784982');
-content_58bce1499dfb84_89792788($_smarty_tpl);
+content_58bce36bd92491_27670340($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "catalog/_partials/variant-links.tpl" */?>
         <?php }?>
@@ -124,9 +124,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
   </div>
 </article>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:10:49
+<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:19:55
          compiled from "D:\php\prestashop\themes\classic\templates\catalog\_partials\variant-links.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_58bce1499dfb84_89792788')) {function content_58bce1499dfb84_89792788($_smarty_tpl) {?><div class="variant-links">
+<?php if ($_valid && !is_callable('content_58bce36bd92491_27670340')) {function content_58bce36bd92491_27670340($_smarty_tpl) {?><div class="variant-links">
   <?php  $_smarty_tpl->tpl_vars['variant'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['variant']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['variants']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['variant']->key => $_smarty_tpl->tpl_vars['variant']->value) {
