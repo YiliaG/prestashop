@@ -1,0 +1,7 @@
+# 此为注释 – 将被 Git 忽略
+
+# 忽略 app/cache/prod 目录下的所有文件
+app/cache/prod/
+
+# 忽略 .idea/ 目录下的所有文件
+.idea/

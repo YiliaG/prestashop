@@ -1,31 +1,37 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2017-03-04 11:51:54
+<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:10:49
          compiled from "D:\php\prestashop\themes\classic\templates\catalog\_partials\miniatures\product.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2585158ba39da0b4c85-64293629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:844858bce025e98b97-02784982%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6c3192553d3c0686d717e067019d9b2edf18e3b1' => 
     array (
       0 => 'D:\\php\\prestashop\\themes\\classic\\templates\\catalog\\_partials\\miniatures\\product.tpl',
+      1 => 1488773448,
+      2 => 'file',
+    ),
+    '021489d5a57ac632f02acafa6e9b3fd0619c3429' => 
+    array (
+      0 => 'D:\\php\\prestashop\\themes\\classic\\templates\\catalog\\_partials\\variant-links.tpl',
       1 => 1487062196,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2585158ba39da0b4c85-64293629',
+  'nocache_hash' => '844858bce025e98b97-02784982',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_58bce026001449_46243632',
   'variables' => 
   array (
     'product' => 0,
     'flag' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_58ba39da1191d1_67014530',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ba39da1191d1_67014530')) {function content_58ba39da1191d1_67014530($_smarty_tpl) {?>
-<article class="product-miniature js-product-miniature" data-id-product="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product'], ENT_QUOTES, 'UTF-8');?>
+<?php if ($_valid && !is_callable('content_58bce026001449_46243632')) {function content_58bce026001449_46243632($_smarty_tpl) {?>
+<article class="col-md-3" data-id-product="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product'], ENT_QUOTES, 'UTF-8');?>
 " data-id-product-attribute="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['product']->value['id_product_attribute'], ENT_QUOTES, 'UTF-8');?>
 " itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
@@ -105,12 +111,41 @@ $_smarty_tpl->tpl_vars['flag']->_loop = true;
 
       
         <?php if ($_smarty_tpl->tpl_vars['product']->value['main_variants']) {?>
-          <?php echo $_smarty_tpl->getSubTemplate ('catalog/_partials/variant-links.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('variants'=>$_smarty_tpl->tpl_vars['product']->value['main_variants']), 0);?>
-
+          <?php /*  Call merged included template "catalog/_partials/variant-links.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('catalog/_partials/variant-links.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('variants'=>$_smarty_tpl->tpl_vars['product']->value['main_variants']), 0, '844858bce025e98b97-02784982');
+content_58bce1499dfb84_89792788($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); 
+/*  End of included template "catalog/_partials/variant-links.tpl" */?>
         <?php }?>
       
     </div>
 
   </div>
 </article>
+<?php }} ?>
+<?php /* Smarty version Smarty-3.1.19, created on 2017-03-06 12:10:49
+         compiled from "D:\php\prestashop\themes\classic\templates\catalog\_partials\variant-links.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_58bce1499dfb84_89792788')) {function content_58bce1499dfb84_89792788($_smarty_tpl) {?><div class="variant-links">
+  <?php  $_smarty_tpl->tpl_vars['variant'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['variant']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['variants']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['variant']->key => $_smarty_tpl->tpl_vars['variant']->value) {
+$_smarty_tpl->tpl_vars['variant']->_loop = true;
+?>
+    <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['url'], ENT_QUOTES, 'UTF-8');?>
+"
+       class="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['type'], ENT_QUOTES, 'UTF-8');?>
+"
+       title="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['name'], ENT_QUOTES, 'UTF-8');?>
+"
+       
+      <?php if ($_smarty_tpl->tpl_vars['variant']->value['html_color_code']) {?> style="background-color: <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['html_color_code'], ENT_QUOTES, 'UTF-8');?>
+" <?php }?>
+      <?php if ($_smarty_tpl->tpl_vars['variant']->value['texture']) {?> style="background-image: url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['texture'], ENT_QUOTES, 'UTF-8');?>
+)" <?php }?>
+    ><span class="sr-only"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['variant']->value['name'], ENT_QUOTES, 'UTF-8');?>
+</span></a>
+  <?php } ?>
+  <span class="js-count count"></span>
+</div>
 <?php }} ?>
